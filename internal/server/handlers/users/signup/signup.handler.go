@@ -13,7 +13,7 @@ import (
 )
 
 type Request struct {
-	User models.UserEntity
+	User models.UserEntity `json:"user"`
 }
 
 type Response struct {

@@ -10,7 +10,7 @@
             "request": "launch",
             "mode": "auto",
             "program": "cmd/clean-rest-arch/main.go",
-            "args": ["d:/GoProjects/clean-rest-arch/config/local.yaml"],
+            "args": ["d:/GoProjects/rest-arch-training/config/local.yaml"],
             "console": "integratedTerminal"
         }
     ]
