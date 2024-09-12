@@ -12,7 +12,7 @@ import (
 )
 
 type Request struct {
-	Task models.TaskEntity
+	Task models.TaskEntity `json:"task"`
 }
 
 type Response struct {

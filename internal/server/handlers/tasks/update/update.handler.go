@@ -12,7 +12,7 @@ import (
 )
 
 type Request struct {
-	Task models.TaskEntity
+	Task models.TaskEntity `json:"task"`
 }
 
 type Response struct {
@@ -41,7 +41,7 @@ func UpdateTask(log *slog.Logger, taskUpdater TaskUpdater) http.HandlerFunc {
 			return
 		}
 
-		data.Task.Id = r.Context().Value("userId").(uint)
+		data.Task.UserId = r.Context().Value("userId").(uint)
 		err := taskUpdater.UpdateTask(&data.Task)
 		if err != nil {
 			log.Error("Failed to update task", "Error", err.Error())
