@@ -4,6 +4,7 @@ import (
 	"clean-rest-arch/internal/config"
 	"clean-rest-arch/internal/models"
 	"fmt"
+	"os"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -16,11 +17,14 @@ type Database struct {
 func New(config config.Config) (*Database, error) {
 	const op = "storage.postgres.New"
 
-	var dsn string = fmt.Sprintf("host=%s port=%d user=%s "+
-		"password=%s dbname=%s sslmode=disable TimeZone=Asia/Shanghai",
-		config.Host, config.Port, config.User, config.Password, config.DbName)
+	// var dsn string = fmt.Sprintf("host=%s port=%d user=%s "+
+	// 	"password=%s dbname=%s sslmode=disable TimeZone=Asia/Shanghai",
+	// 	config.Host, config.Port, config.User, config.Password, config.DbName)
 
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	// db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+
+	dbUrl := os.Getenv("DATABASE_URL")
+	db, err := gorm.Open(postgres.Open(dbUrl), &gorm.Config{})
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", op, err)
 	}

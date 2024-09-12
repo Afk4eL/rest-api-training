@@ -7,10 +7,10 @@ COPY go.mod go.sum ./
 
 RUN go mod download
 
-COPY *.go ./
+COPY . .
 
-RUN go build -o /server
+RUN go build -o /server ./cmd/clean-rest-arch
 
 EXPOSE 8080
 
-CMD ["/server"]
+CMD ["/server", "/rest-arch-training/config/local.yaml"]
