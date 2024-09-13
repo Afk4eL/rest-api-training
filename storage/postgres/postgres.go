@@ -17,13 +17,16 @@ type Database struct {
 func New(config config.Config) (*Database, error) {
 	const op = "storage.postgres.New"
 
-	// var dsn string = fmt.Sprintf("host=%s port=%d user=%s "+
-	// 	"password=%s dbname=%s sslmode=disable TimeZone=Asia/Shanghai",
-	// 	config.Host, config.Port, config.User, config.Password, config.DbName)
+	var dbUrl string
 
-	// db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	if config.Env == "local" {
+		dbUrl = fmt.Sprintf("host=%s port=%d user=%s "+
+			"password=%s dbname=%s sslmode=disable TimeZone=Asia/Shanghai",
+			config.Host, config.Port, config.User, config.Password, config.DbName)
+	} else {
+		dbUrl = os.Getenv("DATABASE_URL")
+	}
 
-	dbUrl := os.Getenv("DATABASE_URL")
 	db, err := gorm.Open(postgres.Open(dbUrl), &gorm.Config{})
 	if err != nil {
 		return nil, fmt.Errorf("%s: %w", op, err)

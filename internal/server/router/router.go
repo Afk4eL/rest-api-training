@@ -27,6 +27,7 @@ func NewRouter(log *slog.Logger, userRepo repos.UserRepository, taskRepo repos.T
 	router.Use(middleware.RealIP)
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.URLFormat)
+	router.Use(middlewares.MiddlewareMetrics)
 
 	router.Handle("/metrics", promhttp.Handler())
 
