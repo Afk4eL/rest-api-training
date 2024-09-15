@@ -1,4 +1,4 @@
-module clean-rest-arch
+module rest-arch-training
 
 go 1.22.5
 

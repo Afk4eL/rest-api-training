@@ -1,9 +1,9 @@
 package main
 
 import (
-	"clean-rest-arch/internal/app"
 	"os"
 	"os/signal"
+	"rest-arch-training/internal/app"
 	"syscall"
 )
 

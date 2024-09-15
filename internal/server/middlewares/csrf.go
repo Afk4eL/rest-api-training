@@ -1,9 +1,9 @@
 package middlewares
 
 import (
-	"clean-rest-arch/internal/server/utils/csrf"
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
 	"net/http"
+	"rest-arch-training/internal/server/utils/csrf"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
 )
 
 // TODO:logger

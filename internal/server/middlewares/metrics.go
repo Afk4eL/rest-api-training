@@ -1,8 +1,8 @@
 package middlewares
 
 import (
-	"clean-rest-arch/internal/server/utils/metrics"
 	"net/http"
+	"rest-arch-training/internal/server/utils/metrics"
 	"time"
 )
 

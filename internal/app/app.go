@@ -1,16 +1,16 @@
 package app
 
 import (
-	"clean-rest-arch/internal/config"
-	"clean-rest-arch/internal/server/router"
-	"clean-rest-arch/internal/server/utils/slogpretty"
-	"clean-rest-arch/storage/postgres"
-	"clean-rest-arch/storage/repos"
 	"context"
 	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
+	"rest-arch-training/internal/config"
+	"rest-arch-training/internal/server/router"
+	"rest-arch-training/internal/server/utils/slogpretty"
+	"rest-arch-training/storage/postgres"
+	"rest-arch-training/storage/repos"
 	"time"
 
 	"github.com/go-chi/chi/v5"

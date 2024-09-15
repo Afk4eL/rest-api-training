@@ -1,10 +1,10 @@
 package middlewares
 
 import (
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
-	"clean-rest-arch/internal/server/utils/jwt"
 	"context"
 	"net/http"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
+	"rest-arch-training/internal/server/utils/jwt"
 	"strconv"
 
 	"github.com/go-chi/render"
