@@ -1,14 +1,14 @@
 package signinHandler
 
 import (
-	"clean-rest-arch/internal/models"
-	"clean-rest-arch/internal/server/utils/csrf"
-	utilhttp "clean-rest-arch/internal/server/utils/http"
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
-	"clean-rest-arch/internal/server/utils/jwt"
 	"errors"
 	"log/slog"
 	"net/http"
+	"rest-arch-training/internal/models"
+	"rest-arch-training/internal/server/utils/csrf"
+	utilhttp "rest-arch-training/internal/server/utils/http"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
+	"rest-arch-training/internal/server/utils/jwt"
 
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"

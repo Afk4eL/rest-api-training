@@ -1,10 +1,10 @@
 package logout
 
 import (
-	"clean-rest-arch/internal/server/utils/csrf"
-	"clean-rest-arch/internal/server/utils/jwt"
 	"log/slog"
 	"net/http"
+	"rest-arch-training/internal/server/utils/csrf"
+	"rest-arch-training/internal/server/utils/jwt"
 
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"

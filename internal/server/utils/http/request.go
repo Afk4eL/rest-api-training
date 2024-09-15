@@ -1,8 +1,8 @@
 package utilhttp
 
 import (
-	"clean-rest-arch/internal/server/utils/validator"
 	"io"
+	"rest-arch-training/internal/server/utils/validator"
 
 	"github.com/go-chi/render"
 )

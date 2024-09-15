@@ -9,8 +9,8 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /server ./cmd/clean-rest-arch
+RUN go build -o /server ./cmd/rest-arch-training
 
 EXPOSE 8080
 
-CMD ["/server", "/rest-arch-training/config/local.yaml"]
+CMD ["/server", "/rest-arch-training/config/prod.yaml"]

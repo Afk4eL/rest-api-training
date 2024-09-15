@@ -1,10 +1,10 @@
 package task_delete
 
 import (
-	utilhttp "clean-rest-arch/internal/server/utils/http"
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
 	"log/slog"
 	"net/http"
+	utilhttp "rest-arch-training/internal/server/utils/http"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
 
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"

@@ -1,8 +1,8 @@
 package repos
 
 import (
-	"clean-rest-arch/internal/models"
 	"fmt"
+	"rest-arch-training/internal/models"
 
 	"gorm.io/gorm"
 )

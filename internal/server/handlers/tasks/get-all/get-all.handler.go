@@ -1,10 +1,10 @@
 package task_get_all
 
 import (
-	"clean-rest-arch/internal/models"
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
 	"log/slog"
 	"net/http"
+	"rest-arch-training/internal/models"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
 
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"

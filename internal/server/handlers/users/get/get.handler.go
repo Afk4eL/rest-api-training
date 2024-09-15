@@ -1,11 +1,11 @@
 package getUserHandler
 
 import (
-	"clean-rest-arch/internal/models"
-	utilhttp "clean-rest-arch/internal/server/utils/http"
-	httperrors "clean-rest-arch/internal/server/utils/http/http.errors"
 	"log/slog"
 	"net/http"
+	"rest-arch-training/internal/models"
+	utilhttp "rest-arch-training/internal/server/utils/http"
+	httperrors "rest-arch-training/internal/server/utils/http/http.errors"
 
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/render"

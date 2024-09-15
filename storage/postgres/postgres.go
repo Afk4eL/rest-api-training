@@ -1,10 +1,10 @@
 package postgres
 
 import (
-	"clean-rest-arch/internal/config"
-	"clean-rest-arch/internal/models"
 	"fmt"
 	"os"
+	"rest-arch-training/internal/config"
+	"rest-arch-training/internal/models"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
