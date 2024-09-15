@@ -16,6 +16,6 @@ func MiddlewareMetrics(next http.Handler) http.Handler {
 
 		duration := time.Since(start)
 		metrics.RequestDuration.WithLabelValues(path, method).Observe(float64(duration))
-		metrics.RequestsTotal.WithLabelValues(path, method, w.Header().Get("status")).Inc()
+		metrics.RequestsTotal.WithLabelValues(path, method, "status").Inc()
 	})
 }
